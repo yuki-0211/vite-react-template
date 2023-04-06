@@ -1,0 +1,48 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.217.4/containers/typescript-node
+{
+  "name": "Node.js & TypeScript",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "vite_app",
+  "workspaceFolder": "/workspace",
+  // Add the IDs of extensions you want installed when the container is created.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "csstools.postcss",
+        "samverschueren.linter-xo",
+        "ms-vscode.vscode-typescript-next",
+        "GitHub.copilot",
+        "GitHub.remotehub",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-preview-github-styles",
+        "kakumei.ts-debug",
+        "infeng.vscode-react-typescript",
+        "vscodevim.vim",
+        "AndenetAlexander.vim-cheatsheet",
+        "BracketPairColorDLW.bracket-pair-color-dlw",
+        "eamodio.gitlens",
+        "pmneo.tsimporter",
+        "stringham.move-ts",
+        "PKief.material-icon-theme"
+      ],
+      "settings": {
+        "search.exclude": {
+          "**/bower_components": true,
+          "**/tmp": true,
+          "**/build": true
+        },
+        "editor.formatOnSave": true,
+        "xo.enable": true,
+        "xo.format.enable": true,
+        "[javascript]": {
+          "editor.defaultFormatter": "samverschueren.linter-xo"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "samverschueren.linter-xo"
+        }
+      }
+    }
+  }
+}
